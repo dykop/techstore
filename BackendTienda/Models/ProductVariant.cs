@@ -29,7 +29,10 @@ namespace BackendTienda.Models
 
         [Column("stock")]
         public int Stock { get; set; }
-
+        [Column("garantia")]
+        public string? Garantia { get; set; }
+        [Column("condicion")]
+        public string? Condicion { get; set; }
         public virtual required Product Model { get; set; }
     }
 }

@@ -185,3 +185,4 @@ D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.xml
 D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.pdb
 D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.genruntimeconfig.cache
 D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\ref\BackendTienda.dll
+D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.sourcelink.json

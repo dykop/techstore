@@ -1,44 +1,47 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { useCart } from "@/components/cart-provider"
-import { formatPrice } from "@/lib/utils"
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { useCart } from "@/components/cart-provider";
+import { formatPrice } from "@/lib/utils";
+import {
+  getProductById,
+  type Product,
+  type ProductVariant,
+} from "@/lib/productService";
 
-// Mock product data - in a real app, this would come from an API
-const products = {
-  "1": {
-    id: "1",
-    name: 'MacBook Pro 14"',
-    description:
-      "The most powerful MacBook Pro ever is here. With the blazing-fast M2 Pro chip — the first of its kind — you get groundbreaking performance and amazing battery life. Add to that a stunning Liquid Retina XDR display and all the ports you need, and you're ready to create, work, and play like never before.",
-    price: 1999,
-    image: "/placeholder.svg",
-    specs: [
-      "Apple M2 Pro chip",
-      "16GB unified memory",
-      "512GB SSD storage",
-      "14-inch Liquid Retina XDR display",
-      "Three Thunderbolt 4 ports",
-      "HDMI port",
-      "SDXC card slot",
-      "Magic Keyboard with Touch ID",
-      "Force Touch trackpad",
-    ],
-  },
-  // Add more products as needed
-}
+export default function ProductPage({ params }: { params: { id: string } }) {
+  const { addItem } = useCart();
+  const [product, setProduct] = useState<Product | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [selectedRam, setSelectedRam] = useState<string | null>(null);
+  const [selectedStorage, setSelectedStorage] = useState<string | null>(null);
+  const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(
+    null
+  );
 
-export default function ProductPage({
-  params,
-}: {
-  params: { id: string }
-}) {
-  const { addItem } = useCart()
-  const product = products[params.id]
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const data = await getProductById(parseInt(params.id));
+        setProduct(data);
+      } catch (error) {
+        console.error("Error fetching product:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProduct();
+  }, [params.id]);
+
+  if (loading) {
+    return <div className="container px-4 py-6">Cargando...</div>;
+  }
 
   if (!product) {
-    return <div>Product not found</div>
+    return <div className="container px-4 py-6">Producto no encontrado</div>;
   }
 
   return (
@@ -56,7 +59,9 @@ export default function ProductPage({
         <div className="space-y-6">
           <div>
             <h1 className="text-3xl font-bold">{product.name}</h1>
-            <p className="text-2xl font-bold mt-2">{formatPrice(product.price)}</p>
+            <p className="text-2xl font-bold mt-2">
+              {formatPrice(product.price)}
+            </p>
           </div>
           <p className="text-muted-foreground">{product.description}</p>
           <div className="space-y-4">
@@ -84,6 +89,5 @@ export default function ProductPage({
         </div>
       </div>
     </div>
-  )
+  );
 }
-
