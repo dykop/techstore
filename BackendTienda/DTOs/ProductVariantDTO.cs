@@ -9,6 +9,9 @@ namespace BackendTienda.DTOs
         public string? Color { get; set; }
         public decimal Price { get; set; }
         public int Stock { get; set; }
+        public string? Garantia { get; set; }
+        public string? Condicion { get; set; }
+
     }
 
     public class CreateVariantDto
@@ -18,5 +21,7 @@ namespace BackendTienda.DTOs
         public string? Color { get; set; }
         public decimal Price { get; set; }
         public int Stock { get; set; }
+        public string? Garantia { get; set; }
+        public string? Condicion { get; set; }
     }
 }

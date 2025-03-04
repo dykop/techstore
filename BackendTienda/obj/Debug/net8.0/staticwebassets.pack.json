@@ -13,8 +13,24 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\BOCETO.png",
+      "PackagePath": "staticwebassets\\imagenes\\BOCETO.png"
+    },
+    {
       "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\cap.png",
       "PackagePath": "staticwebassets\\imagenes\\cap.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\cap10.png",
+      "PackagePath": "staticwebassets\\imagenes\\cap10.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\cap11.png",
+      "PackagePath": "staticwebassets\\imagenes\\cap11.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\cap12.png",
+      "PackagePath": "staticwebassets\\imagenes\\cap12.png"
     },
     {
       "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\cap2.png",
@@ -39,6 +55,14 @@
     {
       "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\cap7.png",
       "PackagePath": "staticwebassets\\imagenes\\cap7.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\cap8.png",
+      "PackagePath": "staticwebassets\\imagenes\\cap8.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\cap9.png",
+      "PackagePath": "staticwebassets\\imagenes\\cap9.png"
     },
     {
       "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\1.png",

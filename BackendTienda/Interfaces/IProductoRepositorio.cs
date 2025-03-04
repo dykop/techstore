@@ -15,7 +15,7 @@ namespace BackendTienda.Interfaces
         Task<IEnumerable<Product>> GetFilteredProductsAsync(ProductoFilterDto filterDto);
         
         // Nuevos métodos para consultas específicas de variantes
-        Task<ProductVariant> GetVariantBySpecsAsync(int productId, string ram, string storage, string color);
+        Task<ProductVariant> GetVariantBySpecsAsync(int productId, string ram, string storage, string color, string condition, string garantia);
         Task<IEnumerable<string>> GetDistinctRamOptionsAsync(int productId);
         Task<IEnumerable<string>> GetDistinctStorageOptionsAsync(int productId, string ram);
         Task<IEnumerable<string>> GetDistinctColorOptionsAsync(int productId, string ram, string storage);

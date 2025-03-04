@@ -22,6 +22,9 @@ export interface Product {
   category: string;
   imageUrl: string;
   variants: ProductVariant[];
+  price: number;
+  specs: string[];
+  image: string;
 }
 
 export const getProducts = async (): Promise<Product[]> => {

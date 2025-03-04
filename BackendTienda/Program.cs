@@ -6,7 +6,7 @@ using BackendTienda.Services;
 using BackendTienda.Middleware;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
-
+using BackendTienda.Interfaces.InterfacesView;
 var builder = WebApplication.CreateBuilder(args);
 
 // CORS configuration
@@ -48,6 +48,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 // Register services
 builder.Services.AddScoped<IProductoRepositorio, ProductoRepositorio>();
 builder.Services.AddScoped<IProductoService, ProductoService>();
+builder.Services.AddScoped<IFiltroBrandRepositorio, FiltroBrandRepositorio>();
+builder.Services.AddScoped<IFiltroBrandService, FiltroBrandService>();
+builder.Services.AddScoped<IFiltroCategoryService, FiltroCategoryService>();
+builder.Services.AddScoped<IFiltroBrandRepositorio, FiltroBrandRepositorio>();
+builder.Services.AddScoped<IFiltroCategoryRepositorio, FiltroCategoryRepositorio>();
 builder.Services.AddAutoMapper(typeof(Program));
 
 // Add custom error handling

@@ -66,13 +66,15 @@ namespace BackendTienda.Repositorios
                 .ToListAsync();
         }
 
-        public async Task<ProductVariant> GetVariantBySpecsAsync(int productId, string ram, string storage, string color)
+        public async Task<ProductVariant> GetVariantBySpecsAsync(int productId, string ram, string storage, string color, string condicion, string garantia)
         {
             return await _context.ProductVariants
                 .Where(v => v.ModelId == productId)
                 .Where(v => v.Ram == ram)
                 .Where(v => v.Storage == storage)
                 .Where(v => v.Color == color)
+                .Where(v => v.Condicion == condicion)
+                .Where(v => v.Garantia == garantia)
                 .FirstOrDefaultAsync();
         }
 

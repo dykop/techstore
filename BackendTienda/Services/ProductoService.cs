@@ -56,9 +56,9 @@ namespace BackendTienda.Services
             return products.Select(MapToDTO);
         }
 
-        public async Task<ProductVariantDTO> GetVariantBySpecsAsync(int productId, string ram, string storage, string color)
+        public async Task<ProductVariantDTO> GetVariantBySpecsAsync(int productId, string ram, string storage, string color, string garantia, string condicion)
         {
-            var variant = await _repositorio.GetVariantBySpecsAsync(productId, ram, storage, color);
+            var variant = await _repositorio.GetVariantBySpecsAsync(productId, ram, storage, color, garantia, condicion);
             return variant != null ? _mapper.Map<ProductVariantDTO>(variant) : null;
         }
 
@@ -97,7 +97,9 @@ namespace BackendTienda.Services
                     Ram = v.Ram ?? "",
                     Color = v.Color ?? "",
                     Price = v.Price,
-                    Stock = v.Stock
+                    Stock = v.Stock,
+                    Garantia = v.Garantia,
+                    Condicion = v.Condicion
                 }).ToList() ?? new List<ProductVariantDTO>()
             };
         }

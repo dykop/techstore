@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using BackendTienda.Models;
 using BackendTienda.DTOs;
+using BackendTienda.Models.Views;
 
 namespace BackendTienda.Data
 {
@@ -13,11 +14,12 @@ namespace BackendTienda.Data
 
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductVariant> ProductVariants { get; set; }
-
+        public DbSet<FiltroBrand> FiltroBrands { get; set; }
+        public DbSet<FiltroCategory> FiltroCategory { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
+            
             modelBuilder.Entity<Product>(entity =>
             {
                 entity.ToTable("product_models");
@@ -69,12 +71,36 @@ namespace BackendTienda.Data
                 entity.Property(e => e.Stock)
                     .HasColumnName("stock")
                     .HasDefaultValue(0);
-
+                entity.Property(e => e.Condicion)
+                    .HasMaxLength(55)
+                    .HasColumnName("condicion")
+                    .IsRequired(false);
+                entity.Property(e => e.Garantia)
+                    .HasMaxLength(55)
+                    .HasColumnName("garantia")
+                    .IsRequired(false);
+                    
                 entity.HasOne(d => d.Model)
                     .WithMany(p => p.Variants)
                     .HasForeignKey(d => d.ModelId)
                     .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_ProductVariants_ProductModels");
+            });
+
+
+
+        /////////////////////////VISTAS/////////////////////////
+        /////////////////////////VISTAS/////////////////////////
+            modelBuilder.Entity<FiltroBrand>(entity=>{
+                entity.HasNoKey();
+                entity.ToView("filtro_brand");
+                entity.Property(e=>e.Brand).HasColumnName("brand");
+            });
+
+            modelBuilder.Entity<FiltroCategory>(entity=>{
+                entity.HasNoKey();
+                entity.ToView("filtro_category");
+                entity.Property(e=>e.Category).HasColumnName("category");
             });
         }
     }

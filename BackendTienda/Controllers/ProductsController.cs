@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Cors;
 using AutoMapper;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
+using BackendTienda.Data;
 
 namespace BackendTienda.Controllers
 {
@@ -15,13 +16,37 @@ namespace BackendTienda.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly IProductoService _productoService;
+        private readonly ApplicationDbContext _app;
         private readonly IWebHostEnvironment _environment;
 
-        public ProductsController(IProductoService productoService, IWebHostEnvironment environment)
+        public ProductsController(IProductoService productoService, IWebHostEnvironment environment, ApplicationDbContext app)
         {
             _productoService = productoService;
             _environment = environment;
+            _app = app;
         }
+        // [HttpGet("test-variant/{id}")]
+        // public async Task<IActionResult> TestVariant(int id)
+        // {
+        //     var variant = await _app.ProductVariants
+        //         .Where(v => v.Id == id)
+        //         .Select(v => new 
+        //         {
+        //             v.Id,
+        //             v.ModelId,
+        //             v.Garantia,
+        //             v.Condicion
+        //         })
+        //         .FirstOrDefaultAsync();
+
+        //     if (variant != null)
+        //     {
+        //         Console.WriteLine($"Garantia: {variant.Garantia}, Condicion: {variant.Condicion}");
+        //         return Ok(variant);
+        //     }
+            
+        //     return NotFound("No se encontró la variante del producto.");
+        // }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ProductoDTO>>> GetProducts()
@@ -91,9 +116,11 @@ namespace BackendTienda.Controllers
             int productId,
             [FromQuery] string ram,
             [FromQuery] string storage,
-            [FromQuery] string color)
+            [FromQuery] string color,
+            [FromQuery] string condicion,
+            [FromQuery] string garantia)
         {
-            var variant = await _productoService.GetVariantBySpecsAsync(productId, ram, storage, color);
+            var variant = await _productoService.GetVariantBySpecsAsync(productId, ram, storage, color, condicion, garantia);
             if (variant == null)
                 return NotFound();
             

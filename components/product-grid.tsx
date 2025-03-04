@@ -83,15 +83,18 @@ export function ProductGrid() {
           className="group relative overflow-hidden rounded-lg border bg-background p-2"
         >
           <Link href={`/product/${product.id}`} className="block relative">
-            <Image
-              src={
-                `http://localhost:5139${product.imageUrl}` || "/placeholder.svg"
-              }
-              alt={product.name}
-              width={400}
-              height={400}
-              className="aspect-square object-cover transition-transform group-hover:scale-105"
-            />
+            <div className="relative w-full h-64">
+              <Image
+                src={
+                  `http://localhost:5139${product.imageUrl}` ||
+                  "/placeholder.svg"
+                }
+                alt={product.name}
+                layout="fill"
+                objectFit="contain"
+                className="transition-transform group-hover:scale-105"
+              />
+            </div>
           </Link>
           <div className="p-4 space-y-4">
             <div className="flex gap-2">

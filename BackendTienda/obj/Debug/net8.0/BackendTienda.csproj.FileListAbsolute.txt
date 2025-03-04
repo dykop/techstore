@@ -138,15 +138,6 @@ D:\CursorExe\Front\BackendTienda\obj\Debug\net8.0\BackendTienda.xml
 D:\CursorExe\Front\BackendTienda\obj\Debug\net8.0\BackendTienda.pdb
 D:\CursorExe\Front\BackendTienda\obj\Debug\net8.0\BackendTienda.genruntimeconfig.cache
 D:\CursorExe\Front\BackendTienda\obj\Debug\net8.0\ref\BackendTienda.dll
-D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.csproj.AssemblyReference.cache
-D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.GeneratedMSBuildEditorConfig.editorconfig
-D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.AssemblyInfoInputs.cache
-D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.AssemblyInfo.cs
-D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.csproj.CoreCompileInputs.cache
-D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.MvcApplicationPartsAssemblyInfo.cs
-D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.MvcApplicationPartsAssemblyInfo.cache
-D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.RazorAssemblyInfo.cache
-D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.RazorAssemblyInfo.cs
 D:\CursorExe\tech-store\BackendTienda\bin\Debug\net8.0\appsettings.Development.json
 D:\CursorExe\tech-store\BackendTienda\bin\Debug\net8.0\appsettings.json
 D:\CursorExe\tech-store\BackendTienda\bin\Debug\net8.0\BackendTienda.staticwebassets.runtime.json
@@ -168,6 +159,16 @@ D:\CursorExe\tech-store\BackendTienda\bin\Debug\net8.0\Pomelo.EntityFrameworkCor
 D:\CursorExe\tech-store\BackendTienda\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\CursorExe\tech-store\BackendTienda\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\CursorExe\tech-store\BackendTienda\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.csproj.AssemblyReference.cache
+D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.GeneratedMSBuildEditorConfig.editorconfig
+D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.AssemblyInfoInputs.cache
+D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.AssemblyInfo.cs
+D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.csproj.CoreCompileInputs.cache
+D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.MvcApplicationPartsAssemblyInfo.cs
+D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.MvcApplicationPartsAssemblyInfo.cache
+D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.RazorAssemblyInfo.cache
+D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.RazorAssemblyInfo.cs
+D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.sourcelink.json
 D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\staticwebassets.build.json
 D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\staticwebassets.development.json
 D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\staticwebassets\msbuild.BackendTienda.Microsoft.AspNetCore.StaticWebAssets.props
@@ -185,4 +186,3 @@ D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.xml
 D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.pdb
 D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.genruntimeconfig.cache
 D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\ref\BackendTienda.dll
-D:\CursorExe\tech-store\BackendTienda\obj\Debug\net8.0\BackendTienda.sourcelink.json

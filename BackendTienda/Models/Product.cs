@@ -28,7 +28,7 @@ namespace BackendTienda.Models
         [MaxLength(255)]
         [Column("image_url")]
         public string? ImageUrl { get; set; }
-
+        
         // Colección de variantes con carga virtual para lazy loading
         public virtual ICollection<ProductVariant> Variants { get; set; } = new List<ProductVariant>();
 

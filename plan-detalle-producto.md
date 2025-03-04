@@ -1,96 +1,249 @@
-# Plan: Implementación de Vista Detallada de Producto
+# Plan de Acción para Corregir Errores en `components/product-grid.tsx`
 
-## Objetivo
+## Problemas Identificados
 
-Implementar una vista detallada del producto que muestre toda la información relevante, incluyendo garantía y condición, manteniendo la funcionalidad de selección de variantes y carrito de compras.
+1. **Duplicación de código en el filtrado de productos**: Hay dos bloques de código que filtran los productos (líneas 58-76 y 77-94). Esto parece ser un error de duplicación.
+2. **Posibles problemas de tipado**: Asegurarse de que los tipos `Product` y `ProductVariant` estén correctamente definidos y utilizados.
 
-## Cambios Necesarios
+## Pasos a Seguir
 
-### 1. Navegación desde la Cuadrícula (`components/product-grid.tsx`)
+1. **Eliminar la duplicación de código en el filtrado de productos**:
 
-- Envolver la imagen del producto con un componente `Link` de Next.js
-- Mantener la funcionalidad existente de selección de variantes en la cuadrícula
-- Asegurar que la navegación no interfiera con la selección de variantes
-- Actualizar la interfaz para mostrar:
-  - Garantía y condición junto a las variantes seleccionadas
-  - Mejorar el diseño para acomodar la nueva información
+   - Consolidar el código de filtrado en un solo bloque.
 
-### 2. Página de Detalle (`app/product/[id]/page.tsx`)
+2. **Verificar y corregir posibles problemas de tipado**:
+   - Asegurarse de que los tipos `Product` y `ProductVariant` estén correctamente definidos y utilizados.
 
-- Implementar obtención de datos desde el backend
-- Actualizar la interfaz para mostrar:
-  - Imagen del producto destacada
-  - Nombre y marca
-  - Descripción completa
-  - Categoría
-  - Selector de variantes con información extendida:
-    - RAM y almacenamiento
-    - Garantía de la variante
-    - Condición del producto
-  - Precio según la variante seleccionada
-  - Botón "Agregar al Carrito"
-- Organizar la información de manera clara y jerárquica:
-  - Panel principal: imagen y detalles básicos
-  - Panel secundario: selección de variantes con sus características específicas
-  - Panel de información adicional: garantía y condición destacadas
-
-### 3. Servicio de Productos (`lib/productService.ts`)
-
-- Agregar nueva función `getProductById` para obtener los detalles de un producto específico
-- Asegurar que la respuesta incluya todos los campos de las variantes:
-  - RAM y almacenamiento
-  - Color
-  - Precio
-  - Stock
-  - Garantía
-  - Condición
-- Implementar manejo de errores adecuado
-
-### 4. Interfaces TypeScript
-
-- Actualizar las interfaces de producto y variante:
+## Código Corregido
 
 ```typescript
-interface ProductVariant {
-  id: number;
-  modelId: number;
-  storage: string;
-  ram: string;
-  color: string;
-  price: number;
-  stock: number;
-  garantia: string; // Nuevo campo
-  condicion: string; // Nuevo campo
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import {
+  getProducts,
+  type Product,
+  type ProductVariant,
+} from "@/lib/productService";
+import { Button } from "@/components/ui/button";
+import { useCart } from "@/components/cart-provider";
+import { formatPrice } from "@/lib/utils";
+
+export function ProductGrid({ category }: { category: string }) {
+  const searchParams = useSearchParams();
+  const { addItem } = useCart();
+  const [products, setProducts] = useState<Product[]>([]);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [selectedRam, setSelectedRam] = useState<string | null>(null);
+  const [selectedStorage, setSelectedStorage] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const data = await getProducts();
+        // Agrupar productos por nombre para mostrar variantes juntas
+        const groupedProducts = data.reduce(
+          (acc: Product[], current: Product) => {
+            const existingProduct = acc.find(
+              (item) =>
+                item.name === current.name && item.brand === current.brand
+            );
+            if (existingProduct) {
+              // Si el producto ya existe, agregamos sus variantes al array de variantes
+              existingProduct.variants = [
+                ...existingProduct.variants,
+                ...current.variants,
+              ];
+            } else {
+              // Si es un nuevo producto, lo agregamos a la lista
+              acc.push({ ...current });
+            }
+            return acc;
+          },
+          []
+        );
+        setProducts(groupedProducts);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  const filteredProducts = products.filter((product) => {
+    const query = searchParams.get("q")?.toLowerCase();
+    const categories = searchParams.getAll("category");
+    const brands = searchParams.getAll("brand");
+
+    if (query && !product.name.toLowerCase().includes(query)) {
+      return false;
+    }
+
+    if (categories.length && !categories.includes(product.category)) {
+      return false;
+    }
+
+    if (brands.length && !brands.includes(product.brand)) {
+      return false;
+    }
+
+    return product.category === category;
+  });
+
+  return (
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      {filteredProducts.map((product: Product) => (
+        <div
+          key={product.id}
+          className="group relative overflow-hidden rounded-lg border bg-background p-2"
+        >
+          <Link href={`/product/${product.id}`} className="block relative">
+            <Image
+              src={
+                `http://localhost:5139${product.imageUrl}` || "/placeholder.svg"
+              }
+              alt={product.name}
+              width={400}
+              height={400}
+              className="aspect-square object-cover transition-transform group-hover:scale-105"
+            />
+          </Link>
+          <div className="p-4 space-y-4">
+            <div className="flex gap-2">
+              <span className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                {product.brand}
+              </span>
+              <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-700 ring-1 ring-inset ring-gray-600/10">
+                {product.category}
+              </span>
+            </div>
+
+            <div>
+              <h3 className="font-semibold mb-1">{product.name}</h3>
+              <p className="text-sm text-muted-foreground">
+                {product.description}
+              </p>
+            </div>
+
+            <div>
+              <label className="text-xs font-medium mb-2 block">
+                Memoria RAM
+              </label>
+              <div className="grid grid-cols-2 gap-2">
+                {Array.from(
+                  new Set(product.variants.map((v: ProductVariant) => v.ram))
+                ).map((ram) => (
+                  <Button
+                    key={`${product.id}-${ram}`}
+                    variant={
+                      selectedRam === ram && selectedProduct?.id === product.id
+                        ? "default"
+                        : "outline"
+                    }
+                    size="sm"
+                    className="w-full text-xs"
+                    onClick={() => {
+                      setSelectedProduct(product);
+                      setSelectedRam(ram);
+                      setSelectedStorage(null);
+                    }}
+                  >
+                    {ram}
+                  </Button>
+                ))}
+              </div>
+            </div>
+
+            {selectedProduct?.id === product.id && selectedRam && (
+              <div>
+                <label className="text-xs font-medium mb-2 block">
+                  Almacenamiento
+                </label>
+                <div className="grid grid-cols-2 gap-2">
+                  {Array.from(
+                    new Set(
+                      product.variants
+                        .filter((v: ProductVariant) => v.ram === selectedRam)
+                        .map((v: ProductVariant) => v.storage)
+                    )
+                  ).map((storage) => (
+                    <Button
+                      key={`${product.id}-${storage}`}
+                      variant={
+                        selectedStorage === storage ? "default" : "outline"
+                      }
+                      size="sm"
+                      className="w-full text-xs"
+                      onClick={() => setSelectedStorage(storage)}
+                    >
+                      {storage}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {selectedProduct?.id === product.id &&
+              selectedRam &&
+              selectedStorage && (
+                <div>
+                  {(() => {
+                    const variant = product.variants.find(
+                      (v: ProductVariant) =>
+                        v.ram === selectedRam && v.storage === selectedStorage
+                    );
+                    return variant ? (
+                      <>
+                        <div className="flex justify-between items-center mb-2">
+                          <span className="text-sm font-medium">Precio:</span>
+                          <span className="text-lg font-bold">
+                            {formatPrice(variant.price)}
+                          </span>
+                        </div>
+                        <div className="space-y-2 mb-4">
+                          <div className="flex justify-between text-sm">
+                            <span className="font-medium">Garantía:</span>
+                            <span className="text-muted-foreground">
+                              {variant.garantia}
+                            </span>
+                          </div>
+                          <div className="flex justify-between text-sm">
+                            <span className="font-medium">Condición:</span>
+                            <span className="text-muted-foreground">
+                              {variant.condicion}
+                            </span>
+                          </div>
+                        </div>
+                        <Button
+                          className="w-full"
+                          size="sm"
+                          onClick={() => {
+                            addItem({
+                              id: `${product.id}-${variant.id}`,
+                              name: `${product.name} (${variant.ram} - ${variant.storage})`,
+                              price: variant.price,
+                              image: `http://localhost:5139${product.imageUrl}`,
+                            });
+                            setSelectedRam(null);
+                            setSelectedStorage(null);
+                            setSelectedProduct(null);
+                          }}
+                        >
+                          Agregar al Carrito
+                        </Button>
+                      </>
+                    ) : null;
+                  })()}
+                </div>
+              )}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 }
 ```
-
-## Implementación
-
-1. **Fase 1: Backend y Servicio**
-
-   - Actualizar interfaces TypeScript
-   - Implementar `getProductById` en el servicio de productos
-   - Verificar que todos los campos nuevos se reciban correctamente
-
-2. **Fase 2: Navegación y Cuadrícula**
-
-   - Modificar la cuadrícula para incluir garantía y condición
-   - Implementar navegación al detalle
-   - Mejorar el diseño para la nueva información
-
-3. **Fase 3: Página de Detalle**
-
-   - Crear un diseño que destaque la información importante
-   - Implementar la selección de variantes con todos sus atributos
-   - Mostrar claramente la garantía y condición de cada variante
-   - Integrar con el carrito de compras
-
-4. **Fase 4: Pruebas y Refinamiento**
-   - Probar todas las funcionalidades
-   - Verificar que se muestren correctamente todos los campos
-   - Asegurar una experiencia de usuario fluida
-   - Comprobar que el carrito maneje correctamente las variantes con sus nuevos campos
-
-## Siguiente Paso
-
-Proceder con la implementación en el modo "Code" una vez que se apruebe este plan.

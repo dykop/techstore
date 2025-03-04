@@ -10,6 +10,8 @@ namespace BackendTienda.DTOs
         public string? Description { get; set; }
         public string? Brand { get; set; }
         public string? Category { get; set; }
+        public string? Garantia { get; set; }
+        public string? Condicion { get; set; }
         public List<ProductVariantDTO> Variants { get; set; } = new();
 
         // Métodos de ayuda para obtener las opciones disponibles
@@ -50,6 +52,8 @@ namespace BackendTienda.DTOs
         public string? Description { get; set; }
         public string? Brand { get; set; }
         public string? Category { get; set; }
+        public string? Condicion { get; set; }
+        public string? Garantia { get; set; }
         public List<ProductVariantDTO>? Variants { get; set; }
     }
 

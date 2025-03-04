@@ -1,36 +1,56 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Minus, Plus, Trash2 } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useCart } from "@/components/cart-provider"
-import { formatPrice } from "@/lib/utils"
+import Image from "next/image";
+import { Minus, Plus, Trash2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useCart } from "@/components/cart-provider";
+import { formatPrice } from "@/lib/utils";
 
 export function CartSheet() {
-  const { items, removeItem, updateQuantity } = useCart()
+  const { items, removeItem, updateQuantity } = useCart();
 
-  const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0)
+  const total = items.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
 
   const handleWhatsAppCheckout = () => {
-    const message = `Hi! I would like to purchase:\n\n${items
-      .map((item) => `${item.name} x${item.quantity} - ${formatPrice(item.price * item.quantity)}`)
-      .join("\n")}\n\nTotal: ${formatPrice(total)}`
+    const message = `Hola, quisiera hacer un pedido. 
+    Lista:\n\n${items
+      .map(
+        (item) =>
+          `${item.name} x${item.quantity} - ${formatPrice(
+            item.price * item.quantity
+          )}`
+      )
+      .join("\n")}\n\nTotal: ${formatPrice(total)} USD`;
 
-    window.open(`https://wa.me/+1234567890?text=${encodeURIComponent(message)}`, "_blank")
-  }
+    // Número de teléfono de WhatsApp (código de país +54 para Argentina)
+    const phoneNumber = "+541123551939";
+
+    // Crear la URL de WhatsApp de manera segura, usando encodeURIComponent
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    // Abrir la URL en una nueva ventana
+    window.open(whatsappURL, "_blank");
+  };
 
   if (items.length === 0) {
     return (
       <div className="flex h-full flex-col items-center justify-center gap-4">
-        <h2 className="text-lg font-semibold">Your cart is empty</h2>
-        <p className="text-sm text-muted-foreground">Add items to your cart to proceed with checkout</p>
+        <h2 className="text-lg font-semibold">Su carito esta vacío.</h2>
+        <p className="text-sm text-muted-foreground">
+          Agregue produtos para continuar con su pedido.
+        </p>
       </div>
-    )
+    );
   }
 
   return (
     <div className="flex h-full flex-col">
-      <h2 className="text-lg font-semibold mb-4">Shopping Cart</h2>
+      <h2 className="text-lg font-semibold mb-4">Carrito Web</h2>
       <div className="flex-1 overflow-auto">
         <ul className="grid gap-4">
           {items.map((item) => (
@@ -44,13 +64,17 @@ export function CartSheet() {
               />
               <div className="flex-1 grid gap-1">
                 <h3 className="font-medium">{item.name}</h3>
-                <p className="text-sm text-muted-foreground">{formatPrice(item.price)}</p>
+                <p className="text-sm text-muted-foreground">
+                  {formatPrice(item.price)}
+                </p>
                 <div className="flex items-center gap-2">
                   <Button
                     variant="outline"
                     size="icon"
                     className="h-8 w-8"
-                    onClick={() => updateQuantity(item.id, Math.max(0, item.quantity - 1))}
+                    onClick={() =>
+                      updateQuantity(item.id, Math.max(0, item.quantity - 1))
+                    }
                   >
                     <Minus className="h-4 w-4" />
                   </Button>
@@ -65,7 +89,11 @@ export function CartSheet() {
                   </Button>
                 </div>
               </div>
-              <Button variant="ghost" size="icon" onClick={() => removeItem(item.id)}>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => removeItem(item.id)}
+              >
                 <Trash2 className="h-4 w-4" />
               </Button>
             </li>
@@ -78,10 +106,9 @@ export function CartSheet() {
           <span className="font-semibold">{formatPrice(total)}</span>
         </div>
         <Button className="w-full" size="lg" onClick={handleWhatsAppCheckout}>
-          Checkout via WhatsApp
+          Contactarse via WhatsApp
         </Button>
       </div>
     </div>
-  )
+  );
 }
-
