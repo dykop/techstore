@@ -14,8 +14,10 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
 }) => {
   const { categories, loading, error } = useCategories();
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error loading categories</p>;
+  if (loading) return <p>Cargando...</p>;
+  if (error) return <p>Error cargando las Categorias</p>;
+
+  console.log("Categorías obtenidas:", categories);
 
   return (
     <div className="grid gap-2">

@@ -11,6 +11,8 @@ import {
   type ProductVariant,
 } from "@/lib/productService";
 
+import Footer from "@/components/Footer";
+
 export default function ProductPage({ params }: { params: { id: string } }) {
   const { addItem } = useCart();
   const [product, setProduct] = useState<Product | null>(null);
@@ -58,7 +60,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   const currentPrice = selectedVariant ? selectedVariant.price : product.price;
 
   return (
-    <div className="container px-4 py-6 md:py-8 flex justify-center">
+    <div className="min-h-screen flex flex-col justify-between">
       <div className="grid md:grid-cols-2 gap-8 items-center">
         <div className="flex justify-center">
           <Image
@@ -171,6 +173,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

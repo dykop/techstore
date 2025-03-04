@@ -15,8 +15,15 @@ const useCategories = () => {
         const response = await fetch(
           "http://localhost:5139/api/FiltroCategory"
         );
-        const data: Category[] = await response.json();
-        setCategories(data);
+        const data = await response.json();
+        console.log("Datos obtenidos de la API:", data);
+        if (Array.isArray(data)) {
+          setCategories(data);
+        } else {
+          throw new Error(
+            "La respuesta de la API no contiene un array de categorías"
+          );
+        }
       } catch (err) {
         setError(err as Error);
       } finally {
