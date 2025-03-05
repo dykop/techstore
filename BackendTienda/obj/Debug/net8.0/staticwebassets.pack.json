@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\imagenes\\cap12.png"
     },
     {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\cap13.png",
+      "PackagePath": "staticwebassets\\imagenes\\cap13.png"
+    },
+    {
       "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\cap2.png",
       "PackagePath": "staticwebassets\\imagenes\\cap2.png"
     },
@@ -65,32 +69,60 @@
       "PackagePath": "staticwebassets\\imagenes\\cap9.png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\1.png",
-      "PackagePath": "staticwebassets\\imagenes\\consolas\\1.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\0 (2).png",
+      "PackagePath": "staticwebassets\\imagenes\\consolas\\0 (2).png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\2.png",
-      "PackagePath": "staticwebassets\\imagenes\\consolas\\2.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\0 (3).png",
+      "PackagePath": "staticwebassets\\imagenes\\consolas\\0 (3).png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\3.png",
-      "PackagePath": "staticwebassets\\imagenes\\consolas\\3.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\0 (4).png",
+      "PackagePath": "staticwebassets\\imagenes\\consolas\\0 (4).png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\4.png",
-      "PackagePath": "staticwebassets\\imagenes\\consolas\\4.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\0 (5).png",
+      "PackagePath": "staticwebassets\\imagenes\\consolas\\0 (5).png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\5.png",
-      "PackagePath": "staticwebassets\\imagenes\\consolas\\5.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\0 (6).png",
+      "PackagePath": "staticwebassets\\imagenes\\consolas\\0 (6).png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\6.png",
-      "PackagePath": "staticwebassets\\imagenes\\consolas\\6.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\0.png",
+      "PackagePath": "staticwebassets\\imagenes\\consolas\\0.png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\9.png",
-      "PackagePath": "staticwebassets\\imagenes\\consolas\\9.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\00.png",
+      "PackagePath": "staticwebassets\\imagenes\\consolas\\00.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\16.png",
+      "PackagePath": "staticwebassets\\imagenes\\consolas\\16.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\17.png",
+      "PackagePath": "staticwebassets\\imagenes\\consolas\\17.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\18.png",
+      "PackagePath": "staticwebassets\\imagenes\\consolas\\18.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\19.png",
+      "PackagePath": "staticwebassets\\imagenes\\consolas\\19.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\20.png",
+      "PackagePath": "staticwebassets\\imagenes\\consolas\\20.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\21.png",
+      "PackagePath": "staticwebassets\\imagenes\\consolas\\21.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\consolas\\Diseño sin título (1).zip",
+      "PackagePath": "staticwebassets\\imagenes\\consolas\\Diseño sin título (1).zip"
     },
     {
       "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\iphone\\1.png",
@@ -113,40 +145,108 @@
       "PackagePath": "staticwebassets\\imagenes\\iphone\\5.png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\motorola\\1.png",
-      "PackagePath": "staticwebassets\\imagenes\\motorola\\1.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\motorola\\0 (2).png",
+      "PackagePath": "staticwebassets\\imagenes\\motorola\\0 (2).png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\motorola\\2.png",
-      "PackagePath": "staticwebassets\\imagenes\\motorola\\2.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\motorola\\0 (3).png",
+      "PackagePath": "staticwebassets\\imagenes\\motorola\\0 (3).png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\motorola\\3.png",
-      "PackagePath": "staticwebassets\\imagenes\\motorola\\3.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\motorola\\0 (4).png",
+      "PackagePath": "staticwebassets\\imagenes\\motorola\\0 (4).png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\motorola\\4.png",
-      "PackagePath": "staticwebassets\\imagenes\\motorola\\4.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\motorola\\0.png",
+      "PackagePath": "staticwebassets\\imagenes\\motorola\\0.png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\parlantes\\1.png",
-      "PackagePath": "staticwebassets\\imagenes\\parlantes\\1.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\motorola\\33.png",
+      "PackagePath": "staticwebassets\\imagenes\\motorola\\33.png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\parlantes\\2.png",
-      "PackagePath": "staticwebassets\\imagenes\\parlantes\\2.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\motorola\\34.png",
+      "PackagePath": "staticwebassets\\imagenes\\motorola\\34.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\motorola\\35.png",
+      "PackagePath": "staticwebassets\\imagenes\\motorola\\35.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\motorola\\37.png",
+      "PackagePath": "staticwebassets\\imagenes\\motorola\\37.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\motorola\\Diseño sin título.zip",
+      "PackagePath": "staticwebassets\\imagenes\\motorola\\Diseño sin título.zip"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\parlantes\\0 (2).png",
+      "PackagePath": "staticwebassets\\imagenes\\parlantes\\0 (2).png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\parlantes\\0.png",
+      "PackagePath": "staticwebassets\\imagenes\\parlantes\\0.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\parlantes\\22.png",
+      "PackagePath": "staticwebassets\\imagenes\\parlantes\\22.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\parlantes\\23.png",
+      "PackagePath": "staticwebassets\\imagenes\\parlantes\\23.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\parlantes\\Diseño sin título.zip",
+      "PackagePath": "staticwebassets\\imagenes\\parlantes\\Diseño sin título.zip"
     },
     {
       "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\placeholder.png",
       "PackagePath": "staticwebassets\\imagenes\\placeholder.png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\samsung\\1.png",
-      "PackagePath": "staticwebassets\\imagenes\\samsung\\1.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\samsung\\0 (2).png",
+      "PackagePath": "staticwebassets\\imagenes\\samsung\\0 (2).png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\samsung\\2.png",
-      "PackagePath": "staticwebassets\\imagenes\\samsung\\2.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\samsung\\0 (3).png",
+      "PackagePath": "staticwebassets\\imagenes\\samsung\\0 (3).png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\samsung\\0 (4).png",
+      "PackagePath": "staticwebassets\\imagenes\\samsung\\0 (4).png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\samsung\\0 (5).png",
+      "PackagePath": "staticwebassets\\imagenes\\samsung\\0 (5).png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\samsung\\0.png",
+      "PackagePath": "staticwebassets\\imagenes\\samsung\\0.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\samsung\\00.png",
+      "PackagePath": "staticwebassets\\imagenes\\samsung\\00.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\samsung\\10.png",
+      "PackagePath": "staticwebassets\\imagenes\\samsung\\10.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\samsung\\11.png",
+      "PackagePath": "staticwebassets\\imagenes\\samsung\\11.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\samsung\\12.png",
+      "PackagePath": "staticwebassets\\imagenes\\samsung\\12.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\samsung\\13.png",
+      "PackagePath": "staticwebassets\\imagenes\\samsung\\13.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\samsung\\14.png",
+      "PackagePath": "staticwebassets\\imagenes\\samsung\\14.png"
     },
     {
       "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\samsung\\3.png",
@@ -161,40 +261,96 @@
       "PackagePath": "staticwebassets\\imagenes\\samsung\\5.png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\1.png",
-      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\1.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\samsung\\6.png",
+      "PackagePath": "staticwebassets\\imagenes\\samsung\\6.png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\2.png",
-      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\2.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\samsung\\7.png",
+      "PackagePath": "staticwebassets\\imagenes\\samsung\\7.png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\3.png",
-      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\3.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\samsung\\9.png",
+      "PackagePath": "staticwebassets\\imagenes\\samsung\\9.png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\4.png",
-      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\4.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\samsung\\Diseño sin título.zip",
+      "PackagePath": "staticwebassets\\imagenes\\samsung\\Diseño sin título.zip"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\5.png",
-      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\5.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\0 (2).png",
+      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\0 (2).png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\6.png",
-      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\6.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\0 (3).png",
+      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\0 (3).png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\7.png",
-      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\7.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\0 (4).png",
+      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\0 (4).png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\8.png",
-      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\8.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\0 (5).png",
+      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\0 (5).png"
     },
     {
-      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\9.png",
-      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\9.png"
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\0 (6).png",
+      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\0 (6).png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\0 (7).png",
+      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\0 (7).png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\0.png",
+      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\0.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\00.png",
+      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\00.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\000.png",
+      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\000.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\24.png",
+      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\24.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\25.png",
+      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\25.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\26.png",
+      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\26.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\27.png",
+      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\27.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\28.png",
+      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\28.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\29.png",
+      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\29.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\30.png",
+      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\30.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\31.png",
+      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\31.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\32.png",
+      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\32.png"
+    },
+    {
+      "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\imagenes\\xiaomi\\Diseño sin título (1).zip",
+      "PackagePath": "staticwebassets\\imagenes\\xiaomi\\Diseño sin título (1).zip"
     },
     {
       "Id": "D:\\CursorExe\\tech-store\\BackendTienda\\wwwroot\\js\\site.js",

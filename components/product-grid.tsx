@@ -92,7 +92,7 @@ export function ProductGrid() {
             {products.map((product) => (
               <div
                 key={product.id}
-                className="group relative overflow-hidden rounded-lg border bg-background p-2"
+                className="group relative overflow-hidden rounded-lg border bg-white p-2"
               >
                 <Link
                   href={`/product/${product.id}`}
